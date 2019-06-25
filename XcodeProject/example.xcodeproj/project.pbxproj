@@ -1,0 +1,1297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3DDAAC4AA80744EF8D118C07 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7AC2FB0727FB4DE58DC14822 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				54D7C5C7CD3F4B1C9475EABE /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		5A0A1BA79B7B4C658F022758 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 368E8FC651914922A8BD8631 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				464B7D2CECA8421CAF096653 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				1DE1EB784BF34D24BBB9D609 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		C18936E03811468F9B4674F5 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8F947C192AA449F68F84A670 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				3884730BE8C64568B49B138D /* CMake Rules */,
+			);
+			dependencies = (
+				4B233819A2124154BACBC1CE /* PBXTargetDependency */,
+				9248BB26325B40F9801F9986 /* PBXTargetDependency */,
+				4D1AC1793C0B42F6B836561B /* PBXTargetDependency */,
+				3A56D48FED6A473AB9FBA433 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		094870F475C14D9CAF8555C2 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = B9AC3E2784E64E80BABEF36A /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/mappings.h */; };
+		260B1C99C55E46369A7078F3 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 751DD398F73A41EF89D09858 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		271404566BFD4416B8FB7DAE /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 89EB446E3A7144C4BFFAECA9 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		2C087E17F9794BD8B484503E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = 1ADAE45BFCE942B38FF2C153 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.h */; };
+		2D140F6269A44E8FB34514B9 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 9C7F3475E5264FF9A393779E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_init.m */; };
+		37B27AD49E114E6FB8ECEABF /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = CB0D8AEDA23648C9B7EF1D34 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.c */; };
+		38045EB0576E444998795757 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 2D37469D13B640149F443B2D /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_time.c */; };
+		4A7AD0CE2A2A44ECB8586D0D /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/main.cpp */ = {isa = PBXBuildFile; fileRef = EB8DF0DC91604210A78EF461 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/main.cpp */; };
+		4C4CAD3177544403B18A8D25 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 2F0D40AAE4B64F04BD3A48BC /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/CMakeLists.txt */; };
+		4EF2EB99BB7D4838A1FA0B6F /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 65117A37117C47E5B390A34E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.c */; };
+		4F9DC7AFD88A494384B5E9EE /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 736F474B500A4845A76EA582 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.h */; };
+		56FF7AE8A54E41B58A909D93 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 760E32A3D9AA4228AABDCD85 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		6271AD5EF53E42B0827C4F00 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 9B9601B3548546B7873494FC /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		6B8F733F42384777A9481A4A /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = 91F1057258724338AB24F357 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.h */; };
+		6C8F50D05C48429AB6AACA6D /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 69558B16D2B243B3A5774147 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/CMakeLists.txt */; };
+		84705E5FD4B541B2BAB11366 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = AE99913ECECE40E588E783E0 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.h */; };
+		8581D97EE32942648040111A /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 701DE06912D7463F9801B307 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/internal.h */; };
+		86083404EB2A41ADAF84E8F4 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = AD5F5BE6F7E24B0CA77F0478 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/include/GLFW/glfw3native.h */; };
+		8C2B9F78725F4FAEB0146486 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 62F32FF049094A37BBD6C03B /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_platform.h */; };
+		940C879960C34FBEA89D1F09 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = AC2F5E53255446C89CEAA242 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		9D50EC37B6BE4B588DFDA908 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = B88A51E224704529843AFB40 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/include/GLFW/glfw3.h */; };
+		B8F4B9203DF849F5819D03C3 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = C36F851C8F14444589F1F231 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_window.m */; };
+		C297CCDC5F874872AD71670E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 0ACCFC9B437A422895EE5652 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_monitor.m */; };
+		D398AAA5292D4AFABAAA52C8 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 655A4CE3440A4DAF970D062A /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src/glfw_config.h */; };
+		DB94382726F64A10AA88DF0F /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = B17EDA48932C471D981A3DC9 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.c */; };
+		E1DFF270BC4147889903DC86 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 524C1787DC2B49EDA68E1576 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		E22B559917DF41C8B4D43EA2 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = EE0773BAB1EB46ACA3B744AD /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.m */; };
+		F39BCCF3106C4CA3A147ADBE /* /Users/mac/Documents/GITRepositories/libigl/external/glad/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 937ED1F6D4D14D7EB821DE2F /* /Users/mac/Documents/GITRepositories/libigl/external/glad/CMakeLists.txt */; };
+		F5070280B2214A2EB3D59D5E /* /Users/mac/Documents/GITRepositories/libigl/external/glad/src/glad.c */ = {isa = PBXBuildFile; fileRef = 97AE60F36C4C4128854B9819 /* /Users/mac/Documents/GITRepositories/libigl/external/glad/src/glad.c */; };
+		FB3151FF669C43798EE6761F /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = 09491592290D42C68B2EFBCF /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.h */; };
+		FE3A1A9CC3B547A78DC87C26 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 99A630CC7EF44389B0DDD311 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		1F28F5CF38864D9FA63B4DDE /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		93853087B2504CC5A0DE8954 = {
+			isa = PBXBuildStyle;
+		};
+		944693D94DF54F6690CF3DFE /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		C75A31EDAA914E41874CCDB9 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		CF3FA5459F4240D58C04C950 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		024DFE840F4A4BB48BF06E20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1367D1D5237F44539966BC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DDAAC4AA80744EF8D118C07;
+			remoteInfo = ZERO_CHECK;
+		};
+		2AAFABCB122641D2A6F3F495 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1367D1D5237F44539966BC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2BC3DEAE51B45F0A938273A;
+			remoteInfo = glad;
+		};
+		4810F9828A4F44ED8D130D44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1367D1D5237F44539966BC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DDAAC4AA80744EF8D118C07;
+			remoteInfo = ZERO_CHECK;
+		};
+		5597509F517F4104A15B1F52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1367D1D5237F44539966BC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDFC3D5AB9845C4BBB510BA;
+			remoteInfo = glfw;
+		};
+		91B68DFCDCEA404DA88AFEA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1367D1D5237F44539966BC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C18936E03811468F9B4674F5;
+			remoteInfo = ALL_BUILD;
+		};
+		BE1779368A954E7EB0CA20AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1367D1D5237F44539966BC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDFC3D5AB9845C4BBB510BA;
+			remoteInfo = glfw;
+		};
+		E6D7A098EA0F4BD697F7F9FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1367D1D5237F44539966BC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2BC3DEAE51B45F0A938273A;
+			remoteInfo = glad;
+		};
+		FA8686DFBA6F4201B8AA3C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1367D1D5237F44539966BC62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36AA16EE95574442B940B69F;
+			remoteInfo = example_bin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09491592290D42C68B2EFBCF /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = ../libigl/external/glfw/src/egl_context.h; sourceTree = SOURCE_ROOT; };
+		0ACCFC9B437A422895EE5652 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = ../libigl/external/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		1ADAE45BFCE942B38FF2C153 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = ../libigl/external/glfw/src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
+		2D37469D13B640149F443B2D /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = ../libigl/external/glfw/src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
+		2F0D40AAE4B64F04BD3A48BC /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		524C1787DC2B49EDA68E1576 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = ../libigl/external/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		55F6FA218DA943749F271BF0 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62F32FF049094A37BBD6C03B /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = ../libigl/external/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		65117A37117C47E5B390A34E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = ../libigl/external/glfw/src/egl_context.c; sourceTree = SOURCE_ROOT; };
+		655A4CE3440A4DAF970D062A /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = XcodeProject/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		69558B16D2B243B3A5774147 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = ../libigl/external/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		701DE06912D7463F9801B307 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = ../libigl/external/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		705771ABA3A9488AAADB7027 /* glad */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		736F474B500A4845A76EA582 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = ../libigl/external/glfw/src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
+		751DD398F73A41EF89D09858 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = ../libigl/external/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		760E32A3D9AA4228AABDCD85 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = ../libigl/external/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		89EB446E3A7144C4BFFAECA9 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = ../libigl/external/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		91F1057258724338AB24F357 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = ../libigl/external/glfw/src/posix_thread.h; sourceTree = SOURCE_ROOT; };
+		937ED1F6D4D14D7EB821DE2F /* /Users/mac/Documents/GITRepositories/libigl/external/glad/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = ../libigl/external/glad/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		94DAEA6F180B465AA5D57B99 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		97AE60F36C4C4128854B9819 /* /Users/mac/Documents/GITRepositories/libigl/external/glad/src/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = ../libigl/external/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
+		99A630CC7EF44389B0DDD311 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = ../libigl/external/glfw/src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
+		9B9601B3548546B7873494FC /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = ../libigl/external/glfw/src/vulkan.c; sourceTree = SOURCE_ROOT; };
+		9C7F3475E5264FF9A393779E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = ../libigl/external/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		AC2F5E53255446C89CEAA242 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = ../libigl/external/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		AD5F5BE6F7E24B0CA77F0478 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = ../libigl/external/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		AE135D26694E4597A6282F70 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		AE99913ECECE40E588E783E0 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = ../libigl/external/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		B17EDA48932C471D981A3DC9 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = ../libigl/external/glfw/src/posix_thread.c; sourceTree = SOURCE_ROOT; };
+		B88A51E224704529843AFB40 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = ../libigl/external/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		B9AC3E2784E64E80BABEF36A /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = ../libigl/external/glfw/src/mappings.h; sourceTree = SOURCE_ROOT; };
+		C36F851C8F14444589F1F231 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = ../libigl/external/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		CB0D8AEDA23648C9B7EF1D34 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = ../libigl/external/glfw/src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
+		E62C206A9DDC4196A507F32C /* example_bin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = example_bin; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB8DF0DC91604210A78EF461 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		EE0773BAB1EB46ACA3B744AD /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = ../libigl/external/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0EEFD9874C0247B6BE6C390E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				655A4CE3440A4DAF970D062A /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src/glfw_config.h */,
+				B88A51E224704529843AFB40 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/include/GLFW/glfw3.h */,
+				AD5F5BE6F7E24B0CA77F0478 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/include/GLFW/glfw3native.h */,
+				736F474B500A4845A76EA582 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.h */,
+				62F32FF049094A37BBD6C03B /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_platform.h */,
+				09491592290D42C68B2EFBCF /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.h */,
+				701DE06912D7463F9801B307 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/internal.h */,
+				B9AC3E2784E64E80BABEF36A /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/mappings.h */,
+				AE99913ECECE40E588E783E0 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.h */,
+				1ADAE45BFCE942B38FF2C153 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.h */,
+				91F1057258724338AB24F357 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		129560B8E12841FA9B2ADB80 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E0F694061EAF4506A03C4C4F /* example_bin */,
+				2B78B1CA4EEF4EEFA206CA72 /* ALL_BUILD */,
+				696245DE366D4C409E03D44F /* ZERO_CHECK */,
+				47F5AF73A39546919030957C /* glad */,
+				67907F123A0F420886F069AE /* GLFW3 */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		191BE721EA1F48938BEF17ED /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F3475E5264FF9A393779E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_init.m */,
+				99A630CC7EF44389B0DDD311 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.m */,
+				0ACCFC9B437A422895EE5652 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_monitor.m */,
+				2D37469D13B640149F443B2D /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_time.c */,
+				C36F851C8F14444589F1F231 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_window.m */,
+				AC2F5E53255446C89CEAA242 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/context.c */,
+				65117A37117C47E5B390A34E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.c */,
+				760E32A3D9AA4228AABDCD85 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/init.c */,
+				751DD398F73A41EF89D09858 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/input.c */,
+				524C1787DC2B49EDA68E1576 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/monitor.c */,
+				EE0773BAB1EB46ACA3B744AD /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.m */,
+				CB0D8AEDA23648C9B7EF1D34 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.c */,
+				B17EDA48932C471D981A3DC9 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.c */,
+				9B9601B3548546B7873494FC /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/vulkan.c */,
+				89EB446E3A7144C4BFFAECA9 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		23150DA89B4449458D5A6B2D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				97AE60F36C4C4128854B9819 /* /Users/mac/Documents/GITRepositories/libigl/external/glad/src/glad.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		2B78B1CA4EEF4EEFA206CA72 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				7A085D2E40F140B3814F0A3B /* CMake Rules */,
+				94DAEA6F180B465AA5D57B99 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		47F5AF73A39546919030957C /* glad */ = {
+			isa = PBXGroup;
+			children = (
+				23150DA89B4449458D5A6B2D /* Source Files */,
+				937ED1F6D4D14D7EB821DE2F /* /Users/mac/Documents/GITRepositories/libigl/external/glad/CMakeLists.txt */,
+			);
+			name = glad;
+			sourceTree = "<group>";
+		};
+		5FDB91D7A2DA49268C8F6B4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E62C206A9DDC4196A507F32C /* example_bin */,
+				705771ABA3A9488AAADB7027 /* glad */,
+				55F6FA218DA943749F271BF0 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67907F123A0F420886F069AE /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				A246A318FD8B4191B4DFC211 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		696245DE366D4C409E03D44F /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				6FFB4854F86F474B83488C24 /* CMake Rules */,
+				AE135D26694E4597A6282F70 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		6FFB4854F86F474B83488C24 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		7A085D2E40F140B3814F0A3B /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		A246A318FD8B4191B4DFC211 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				191BE721EA1F48938BEF17ED /* Source Files */,
+				0EEFD9874C0247B6BE6C390E /* Header Files */,
+				69558B16D2B243B3A5774147 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		AC7AFC4F83D74FCE814318D7 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB8DF0DC91604210A78EF461 /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		DFFD1220FC21403F96C12A89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E0F694061EAF4506A03C4C4F /* example_bin */ = {
+			isa = PBXGroup;
+			children = (
+				AC7AFC4F83D74FCE814318D7 /* Source Files */,
+				2F0D40AAE4B64F04BD3A48BC /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/CMakeLists.txt */,
+			);
+			name = example_bin;
+			sourceTree = "<group>";
+		};
+		FD27A1DDF74B414EA33970CF = {
+			isa = PBXGroup;
+			children = (
+				129560B8E12841FA9B2ADB80 /* Sources */,
+				DFFD1220FC21403F96C12A89 /* Resources */,
+				5FDB91D7A2DA49268C8F6B4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36AA16EE95574442B940B69F /* example_bin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C49454A5C82D479BBAEB2F10 /* Build configuration list for PBXNativeTarget "example_bin" */;
+			buildPhases = (
+				D922844D619D494C957BF24F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C171A35E6754F138A17D8F0 /* PBXTargetDependency */,
+				A67AE702D49A405DBF35330F /* PBXTargetDependency */,
+				3C180D7DF13A41B5A562A46B /* PBXTargetDependency */,
+			);
+			name = example_bin;
+			productName = example_bin;
+			productReference = E62C206A9DDC4196A507F32C /* example_bin */;
+			productType = "com.apple.product-type.tool";
+		};
+		A2BC3DEAE51B45F0A938273A /* glad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 230B61169EBE485CAB86AA80 /* Build configuration list for PBXNativeTarget "glad" */;
+			buildPhases = (
+				43E5AA74867549879EF7BE6F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glad;
+			productName = glad;
+			productReference = 705771ABA3A9488AAADB7027 /* glad */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CFDFC3D5AB9845C4BBB510BA /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B74DE877B74799ADC76B59 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				6666EFEFB773401BAA16D485 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = 55F6FA218DA943749F271BF0 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1367D1D5237F44539966BC62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 7B643CF40F544F20AAB4FA64 /* Build configuration list for PBXProject "example" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				1F28F5CF38864D9FA63B4DDE /* Debug */,
+				944693D94DF54F6690CF3DFE /* Release */,
+				C75A31EDAA914E41874CCDB9 /* MinSizeRel */,
+				CF3FA5459F4240D58C04C950 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = FD27A1DDF74B414EA33970CF;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				C18936E03811468F9B4674F5 /* ALL_BUILD */,
+				3DDAAC4AA80744EF8D118C07 /* ZERO_CHECK */,
+				36AA16EE95574442B940B69F /* example_bin */,
+				5A0A1BA79B7B4C658F022758 /* install */,
+				A2BC3DEAE51B45F0A938273A /* glad */,
+				CFDFC3D5AB9845C4BBB510BA /* glfw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00C50472676C4ECD996B29CE = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		25AEAC50247E436BBFB7AC8A = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		3884730BE8C64568B49B138D /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject -f /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		464B7D2CECA8421CAF096653 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject -f /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		54D7C5C7CD3F4B1C9475EABE /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject -f /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		65072A35470340B088A9B17C = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43E5AA74867549879EF7BE6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5070280B2214A2EB3D59D5E /* /Users/mac/Documents/GITRepositories/libigl/external/glad/src/glad.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6666EFEFB773401BAA16D485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D140F6269A44E8FB34514B9 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_init.m */,
+				FE3A1A9CC3B547A78DC87C26 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_joystick.m */,
+				C297CCDC5F874872AD71670E /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_monitor.m */,
+				38045EB0576E444998795757 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_time.c */,
+				B8F4B9203DF849F5819D03C3 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/cocoa_window.m */,
+				940C879960C34FBEA89D1F09 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/context.c */,
+				4EF2EB99BB7D4838A1FA0B6F /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/egl_context.c */,
+				56FF7AE8A54E41B58A909D93 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/init.c */,
+				260B1C99C55E46369A7078F3 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/input.c */,
+				E1DFF270BC4147889903DC86 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/monitor.c */,
+				E22B559917DF41C8B4D43EA2 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/nsgl_context.m */,
+				37B27AD49E114E6FB8ECEABF /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/osmesa_context.c */,
+				DB94382726F64A10AA88DF0F /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/posix_thread.c */,
+				6271AD5EF53E42B0827C4F00 /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/vulkan.c */,
+				271404566BFD4416B8FB7DAE /* /Users/mac/Documents/GITRepositories/libigl/external/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D922844D619D494C957BF24F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7AD0CE2A2A44ECB8586D0D /* /Users/mac/Documents/GITRepositories/Dev-2-libigl/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DE1EB784BF34D24BBB9D609 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C18936E03811468F9B4674F5 /* ALL_BUILD */;
+			targetProxy = 91B68DFCDCEA404DA88AFEA4 /* PBXContainerItemProxy */;
+		};
+		3A56D48FED6A473AB9FBA433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFDFC3D5AB9845C4BBB510BA /* glfw */;
+			targetProxy = BE1779368A954E7EB0CA20AD /* PBXContainerItemProxy */;
+		};
+		3C180D7DF13A41B5A562A46B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFDFC3D5AB9845C4BBB510BA /* glfw */;
+			targetProxy = 5597509F517F4104A15B1F52 /* PBXContainerItemProxy */;
+		};
+		4B233819A2124154BACBC1CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2BC3DEAE51B45F0A938273A /* glad */;
+			targetProxy = 2AAFABCB122641D2A6F3F495 /* PBXContainerItemProxy */;
+		};
+		4C171A35E6754F138A17D8F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2BC3DEAE51B45F0A938273A /* glad */;
+			targetProxy = E6D7A098EA0F4BD697F7F9FB /* PBXContainerItemProxy */;
+		};
+		4D1AC1793C0B42F6B836561B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36AA16EE95574442B940B69F /* example_bin */;
+			targetProxy = FA8686DFBA6F4201B8AA3C61 /* PBXContainerItemProxy */;
+		};
+		9248BB26325B40F9801F9986 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DDAAC4AA80744EF8D118C07 /* ZERO_CHECK */;
+			targetProxy = 024DFE840F4A4BB48BF06E20 /* PBXContainerItemProxy */;
+		};
+		A67AE702D49A405DBF35330F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DDAAC4AA80744EF8D118C07 /* ZERO_CHECK */;
+			targetProxy = 4810F9828A4F44ED8D130D44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02766D3F1AF34FF8A0F98A90 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		028A2CCBF63942AEB566F88C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/build";
+			};
+			name = Debug;
+		};
+		164589C965D44BE692D6144B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		16B004399120412993C31561 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/build";
+			};
+			name = RelWithDebInfo;
+		};
+		1ADEF068EF7E42D39CC8393E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/build";
+			};
+			name = MinSizeRel;
+		};
+		1AF6535B04A745D9B2C3B482 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/external/glfw/include,/Users/mac/Documents/GITRepositories/libigl/external/glfw/src,"/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -fPIC        -DNDEBUG -fPIC -Wall -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/include -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/src -I/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2DF2C53019144F1E92C39C7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/external/glfw/include,/Users/mac/Documents/GITRepositories/libigl/external/glfw/src,"/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -fPIC    -fPIC -Wall -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/include -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/src -I/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3A1D1140858947FB816A2778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/external/glad/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -fPIC     -DNDEBUG -I/Users/mac/Documents/GITRepositories/libigl/external/glad/include   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glad";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		3D02492C953641F7BB8E184F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		5A4A23E80C6F4C8099BC2741 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		69D5FB2E641E4A59825E99B1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/cmake/../include,/Users/mac/Documents/GITRepositories/libigl/cmake/../external/eigen,/Users/mac/Documents/GITRepositories/libigl/external/glad/include,/Users/mac/Documents/GITRepositories/libigl/external/glfw/include);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = " -fPIC        -DNDEBUG '-std=gnu++11' -isystem /Users/mac/Documents/GITRepositories/libigl/cmake/../include -isystem /Users/mac/Documents/GITRepositories/libigl/cmake/../external/eigen -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks -I/Users/mac/Documents/GITRepositories/libigl/external/glad/include -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/include   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names       -framework OpenGL /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glad/RelWithDebInfo/libglad.a /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src/RelWithDebInfo/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = example_bin;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		74A6D9C67BBD4DF381E17DE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8F008597248E4D348CE47934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		936AA4BCEA5B40CCAED1CE24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		98B5B94BF163453E84AAA39C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/external/glad/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -fPIC    -I/Users/mac/Documents/GITRepositories/libigl/external/glad/include   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glad";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A33D5DBC31274DC3BCB4F247 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/external/glad/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -fPIC        -DNDEBUG -I/Users/mac/Documents/GITRepositories/libigl/external/glad/include   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glad";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A7E73488B3EE410885A6BA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/build";
+			};
+			name = Release;
+		};
+		BBEBF40EF4814428B003E228 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/external/glad/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -fPIC     -DNDEBUG -I/Users/mac/Documents/GITRepositories/libigl/external/glad/include   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glad";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BE7CB3EDB2A14265B6743600 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/cmake/../include,/Users/mac/Documents/GITRepositories/libigl/cmake/../external/eigen,/Users/mac/Documents/GITRepositories/libigl/external/glad/include,/Users/mac/Documents/GITRepositories/libigl/external/glfw/include);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = " -fPIC     -DNDEBUG '-std=gnu++11' -isystem /Users/mac/Documents/GITRepositories/libigl/cmake/../include -isystem /Users/mac/Documents/GITRepositories/libigl/cmake/../external/eigen -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks -I/Users/mac/Documents/GITRepositories/libigl/external/glad/include -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/include   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names       -framework OpenGL /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glad/MinSizeRel/libglad.a /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src/MinSizeRel/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = example_bin;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C796A21C79514A1CA5D3DD74 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D0AF970836E1410B8896C5DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/cmake/../include,/Users/mac/Documents/GITRepositories/libigl/cmake/../external/eigen,/Users/mac/Documents/GITRepositories/libigl/external/glad/include,/Users/mac/Documents/GITRepositories/libigl/external/glfw/include);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = " -fPIC    '-std=gnu++11' -isystem /Users/mac/Documents/GITRepositories/libigl/cmake/../include -isystem /Users/mac/Documents/GITRepositories/libigl/cmake/../external/eigen -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks -I/Users/mac/Documents/GITRepositories/libigl/external/glad/include -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/include   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names       -framework OpenGL /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glad/Debug/libglad.a /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src/Debug/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = example_bin;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		D63C169DA15F4964B936B0E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/cmake/../include,/Users/mac/Documents/GITRepositories/libigl/cmake/../external/eigen,/Users/mac/Documents/GITRepositories/libigl/external/glad/include,/Users/mac/Documents/GITRepositories/libigl/external/glfw/include);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = " -fPIC     -DNDEBUG '-std=gnu++11' -isystem /Users/mac/Documents/GITRepositories/libigl/cmake/../include -isystem /Users/mac/Documents/GITRepositories/libigl/cmake/../external/eigen -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks -I/Users/mac/Documents/GITRepositories/libigl/external/glad/include -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/include   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names       -framework OpenGL /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glad/Release/libglad.a /Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src/Release/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = example_bin;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DD4F13AD04004F52A6AB0428 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/external/glfw/include,/Users/mac/Documents/GITRepositories/libigl/external/glfw/src,"/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -fPIC     -DNDEBUG -fPIC -Wall -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/include -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/src -I/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E3092896F47647BEB589624A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EAF881BB77A343D5A2C8CF24 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		ED54F257FA7548BC944DB4C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/mac/Documents/GITRepositories/libigl/external/glfw/include,/Users/mac/Documents/GITRepositories/libigl/external/glfw/src,"/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = " -fPIC     -DNDEBUG -fPIC -Wall -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/include -I/Users/mac/Documents/GITRepositories/libigl/external/glfw/src -I/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F4C5FA18AF2A462992E34EA1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FBB37CE812274A4691086563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/mac/Documents/GITRepositories/Dev-2-libigl/XcodeProject";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		230B61169EBE485CAB86AA80 /* Build configuration list for PBXNativeTarget "glad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98B5B94BF163453E84AAA39C /* Debug */,
+				3A1D1140858947FB816A2778 /* Release */,
+				BBEBF40EF4814428B003E228 /* MinSizeRel */,
+				A33D5DBC31274DC3BCB4F247 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		368E8FC651914922A8BD8631 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F008597248E4D348CE47934 /* Debug */,
+				FBB37CE812274A4691086563 /* Release */,
+				02766D3F1AF34FF8A0F98A90 /* MinSizeRel */,
+				E3092896F47647BEB589624A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		47B74DE877B74799ADC76B59 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF2C53019144F1E92C39C7B /* Debug */,
+				ED54F257FA7548BC944DB4C7 /* Release */,
+				DD4F13AD04004F52A6AB0428 /* MinSizeRel */,
+				1AF6535B04A745D9B2C3B482 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7AC2FB0727FB4DE58DC14822 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D02492C953641F7BB8E184F /* Debug */,
+				74A6D9C67BBD4DF381E17DE4 /* Release */,
+				F4C5FA18AF2A462992E34EA1 /* MinSizeRel */,
+				C796A21C79514A1CA5D3DD74 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7B643CF40F544F20AAB4FA64 /* Build configuration list for PBXProject "example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				028A2CCBF63942AEB566F88C /* Debug */,
+				A7E73488B3EE410885A6BA95 /* Release */,
+				1ADEF068EF7E42D39CC8393E /* MinSizeRel */,
+				16B004399120412993C31561 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8F947C192AA449F68F84A670 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A4A23E80C6F4C8099BC2741 /* Debug */,
+				936AA4BCEA5B40CCAED1CE24 /* Release */,
+				EAF881BB77A343D5A2C8CF24 /* MinSizeRel */,
+				164589C965D44BE692D6144B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C49454A5C82D479BBAEB2F10 /* Build configuration list for PBXNativeTarget "example_bin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AF970836E1410B8896C5DA /* Debug */,
+				D63C169DA15F4964B936B0E4 /* Release */,
+				BE7CB3EDB2A14265B6743600 /* MinSizeRel */,
+				69D5FB2E641E4A59825E99B1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1367D1D5237F44539966BC62 /* Project object */;
+}
