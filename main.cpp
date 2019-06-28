@@ -102,10 +102,20 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
       points.conservativeResize(points.rows()+1, 3);
         
         // Add your code here...
+       
         // caluculate the collision position and then update the position of the added point
         Vector3f pcollision = CollisionPositionBC(bc, fid) ;
         points.row(points.rows()-1) << pcollision(0), pcollision(1), pcollision(2) ;
+        //cout<<"Points:"<<endl<<points<<endl;
 
+        
+        // Resize the edge
+        edges.conservativeResize(edges.rows()+1, 2);
+        // Update edges values
+        edges(edges.rows()-2,1) = points.rows()-1;
+        edges(edges.rows()-1,0) = points.rows()-1;
+        edges(edges.rows()-1,1) = 1;
+        //cout<<"Edges:"<<endl<<edges<<endl;
         
       // Offset the new point with respect to the plane by setting its
       // Z value to 0.0.
@@ -164,7 +174,7 @@ int main(int argc, char *argv[])
   Cp.resize(1,3);
   Cp << 1, 1, 1;
   edgeColors.resize(1,3);
-  edgeColors << 1, 1, 1;
+  edgeColors << 1, 0, 0;
 
   igl::opengl::glfw::Viewer viewer;
   viewer.callback_mouse_down = &my_mouse_down;
