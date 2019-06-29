@@ -52,7 +52,18 @@ Eigen::Vector3f CollisionPositionBC( Eigen::Vector3f bc,int faceID)
     position(2)= 0.01;
     return position ;
 }
-
+// return the rotated matrix of points around axis X angle dgree
+MatrixXd rotatePoints(MatrixXd points, double angle)
+{
+    Transform<double, 3, Affine> t = Transform<double, 3, Affine>::Identity();
+    t.rotate( AngleAxisd( angle / 180 * M_PI, Vector3d::UnitX() ) );
+    
+    MatrixXd V_transformed = t.matrix() * (Eigen::Map<MatrixXd>(points.data(), points.rows(), points.cols()).rowwise().homogeneous().transpose());
+    V_transformed.transposeInPlace();
+    
+    V_transformed.conservativeResize(V_transformed.rows(), 3);
+    return V_transformed ;
+}
 
 
 void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
@@ -60,7 +71,32 @@ void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
   cout << "Computing surface of revolution" << endl;
 
   // Add your code here...
+   /* issue is here <AFFECTION ROW(I)=>
+    RV.resize(1, 3);
+    RV.row(0) = points.row(0);
+    for (int i=1; i<points.rows()-1; ++i) {
+        RV.conservativeResize(RV.rows()+3, 3);
+            Vector3f nd = points.row(i), nl = points.row(i), nb;
+            nd(1) = -1 * points.row(i)(1);
+            nl(1) = 0 ;
+            nl(2) = points.row(i)(1);
+            
+            nb =nl ;
+            nb(2) = nl(2) *-1 ;
+            
+            RV.row(points.rows()-3) << nl(0), nl(1), nl(2) ;
+            RV.row(points.rows()-2) << nb(0), nb(1), nb(2) ;
+            RV.row(points.rows()-1) << nd(0), nd(1), nd(2) ;
 
+        
+
+    }
+    RV.row(RV.rows()-1)= points.row(points.rows()-1);
+*/
+    MatrixXd newPoints = rotatePoints(points,30);
+    points = newPoints ;
+    viewer.data().set_points(points, Cp);
+    viewer.data().set_edges(points, edges, edgeColors);
   // Set the new mesh.
   // Uncomment when you are finished coding the preparation of faces 
   // of the surface of revolution.
@@ -120,6 +156,14 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
       // Offset the new point with respect to the plane by setting its
       // Z value to 0.0.
       points(points.rows() - 2,2) = 0.0;
+    
+        
+        // TEST
+        
+        //points.conservativeResize(points.rows()+1, 3);
+       // Vector3f pcollision_2 = pcollision;
+
+
 
       viewer.data().set_points(points, Cp);
       viewer.data().set_edges(points, edges, edgeColors);
@@ -174,7 +218,7 @@ int main(int argc, char *argv[])
   Cp.resize(1,3);
   Cp << 1, 1, 1;
   edgeColors.resize(1,3);
-  edgeColors << 1, 0, 0;
+  edgeColors << 1, 1, 1;
 
   igl::opengl::glfw::Viewer viewer;
   viewer.callback_mouse_down = &my_mouse_down;
