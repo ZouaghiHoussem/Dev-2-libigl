@@ -65,7 +65,9 @@ MatrixXd rotatePoints(MatrixXd points, double angle)
     return V_transformed ;
 }
 
-
+double randd() {
+    return (double)rand() / (RAND_MAX + 1.0);
+}
 void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
 {
   cout << "Computing surface of revolution" << endl;
@@ -163,7 +165,10 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
         //points.conservativeResize(points.rows()+1, 3);
        // Vector3f pcollision_2 = pcollision;
 
+        Cp.conservativeResize(Cp.rows()+1,3);
+        Cp.row(Cp.rows() - 1) << randd(),randd(),randd();
 
+        
 
       viewer.data().set_points(points, Cp);
       viewer.data().set_edges(points, edges, edgeColors);
@@ -217,6 +222,7 @@ int main(int argc, char *argv[])
 
   Cp.resize(1,3);
   Cp << 1, 1, 1;
+
   edgeColors.resize(1,3);
   edgeColors << 1, 1, 1;
 
