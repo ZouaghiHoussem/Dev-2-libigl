@@ -163,7 +163,11 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
         edges(edges.rows()-2,1) = points.rows()-2;
         edges(edges.rows()-1,0) = points.rows()-2;
         edges(edges.rows()-1,1) = points.rows()-1;
-        //cout<<"Edges:"<<endl<<edges<<endl;
+        
+        //color
+        edgeColors.conservativeResize(edgeColors.rows()+1,3);
+        edgeColors.row(edgeColors.rows() - 1) << edgeColors.row(edgeColors.rows() - 2) ;
+        edgeColors.row(edgeColors.rows() - 2) << randd(),randd(),randd();
         
       // Offset the new point with respect to the plane by setting its
       // Z value to 0.0.
@@ -176,7 +180,8 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
        // Vector3f pcollision_2 = pcollision;
 
         Cp.conservativeResize(Cp.rows()+1,3);
-        Cp.row(Cp.rows() - 1) << randd(),randd(),randd();
+        Cp.row(Cp.rows() - 1) << Cp.row(Cp.rows() - 2) ;
+        Cp.row(Cp.rows() - 2) << randd(),randd(),randd();
 
         
 
@@ -230,8 +235,8 @@ int main(int argc, char *argv[])
   edges.resize(1,2);
   edges << 0,1;
 
-  Cp.resize(1,3);
-  Cp << 1, 1, 1;
+  Cp.resize(2,3);
+  Cp << 1, 1, 1,1,1,1;
 
   edgeColors.resize(1,3);
   edgeColors << 1, 1, 1;
