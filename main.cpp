@@ -64,41 +64,50 @@ MatrixXd rotatePoints(MatrixXd points, double angle)
     V_transformed.conservativeResize(V_transformed.rows(), 3);
     return V_transformed ;
 }
-
 double randd() {
     return (double)rand() / (RAND_MAX + 1.0);
 }
+
+MatrixXd GenerateVertices(MatrixXd points)
+{
+    MatrixXd verts ;
+    
+    for (int i=0; i<points.rows(); i++)
+    {
+        double _x =points(i,0),_y =points(i,1),_z =points(i,2);
+
+        if(i==0 || i==points.rows()-1)
+        {
+            verts.conservativeResize(verts.rows()+1, 3);
+            verts.row(verts.rows()-1) << _x,_y,_z ;
+            continue ;
+        }
+        else
+            for (int j =0; j<nbSubdiv; ++j)
+            {
+
+                // formule r := sqrt(v[a].y^2 + v[a].z^2);
+                double _r= sqrt(pow(_y, 2)+pow(_z, 2)) ;
+                
+                verts.conservativeResize(verts.rows()+1, 3);
+                
+                // formule x=x; y=r*cos(slice*(2*PI/Slices)));z=r*sin(slice*(2*PI/Slices)));
+                verts.row(verts.rows()-1) << _x, (_r*cos(j*(2*M_PI/nbSubdiv))),(_r*sin(j*(2*M_PI/nbSubdiv))) ;
+            }
+    }
+    return verts;
+}
+
+
 void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
 {
   cout << "Computing surface of revolution" << endl;
 
   // Add your code here...
-   /* issue is here <AFFECTION ROW(I)=>
-    RV.resize(1, 3);
-    RV.row(0) = points.row(0);
-    for (int i=1; i<points.rows()-1; ++i) {
-        RV.conservativeResize(RV.rows()+3, 3);
-            Vector3f nd = points.row(i), nl = points.row(i), nb;
-            nd(1) = -1 * points.row(i)(1);
-            nl(1) = 0 ;
-            nl(2) = points.row(i)(1);
-            
-            nb =nl ;
-            nb(2) = nl(2) *-1 ;
-            
-            RV.row(points.rows()-3) << nl(0), nl(1), nl(2) ;
-            RV.row(points.rows()-2) << nb(0), nb(1), nb(2) ;
-            RV.row(points.rows()-1) << nd(0), nd(1), nd(2) ;
+    RV =GenerateVertices(points) ;
+    viewer.data().set_points(RV, Cp);
 
-        
-
-    }
-    RV.row(RV.rows()-1)= points.row(points.rows()-1);
-*/
-    MatrixXd newPoints = rotatePoints(points,30);
-    points = newPoints ;
-    viewer.data().set_points(points, Cp);
-    viewer.data().set_edges(points, edges, edgeColors);
+    //viewer.data().set_edges(newPoints, edges, edgeColors);
   // Set the new mesh.
   // Uncomment when you are finished coding the preparation of faces 
   // of the surface of revolution.
@@ -138,21 +147,22 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
     {
       // Resize the matrix while keeping the data.
       points.conservativeResize(points.rows()+1, 3);
-        
+        points.row(points.rows()-1) = points.row(points.rows()-2);
         // Add your code here...
        
         // caluculate the collision position and then update the position of the added point
         Vector3f pcollision = CollisionPositionBC(bc, fid) ;
-        points.row(points.rows()-1) << pcollision(0), pcollision(1), pcollision(2) ;
+        points.row(points.rows()-2) << pcollision(0), pcollision(1), pcollision(2) ;
         //cout<<"Points:"<<endl<<points<<endl;
 
         
         // Resize the edge
         edges.conservativeResize(edges.rows()+1, 2);
+        
         // Update edges values
-        edges(edges.rows()-2,1) = points.rows()-1;
-        edges(edges.rows()-1,0) = points.rows()-1;
-        edges(edges.rows()-1,1) = 1;
+        edges(edges.rows()-2,1) = points.rows()-2;
+        edges(edges.rows()-1,0) = points.rows()-2;
+        edges(edges.rows()-1,1) = points.rows()-1;
         //cout<<"Edges:"<<endl<<edges<<endl;
         
       // Offset the new point with respect to the plane by setting its
