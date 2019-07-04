@@ -71,7 +71,6 @@ double randd() {
 MatrixXd GenerateVertices(MatrixXd points)
 {
     MatrixXd verts ;
-    
     for (int i=0; i<points.rows(); i++)
     {
         double _x =points(i,0),_y =points(i,1),_z =points(i,2);
@@ -98,23 +97,59 @@ MatrixXd GenerateVertices(MatrixXd points)
     return verts;
 }
 
-
+int clamp (int min, int max, int value)
+{
+    if(value>=max || value<min)
+        return min;
+    else
+        return value;
+}
 void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
 {
   cout << "Computing surface of revolution" << endl;
-
-  // Add your code here...
+  
+    // Add your code here...
     RV =GenerateVertices(points) ;
-    viewer.data().set_points(RV, Cp);
+ 
+    int n = points.rows();
+    int nvtx = (n-2)*4+1 ;
+    cout<<"n="<<n<<" nvtx="<<nvtx<<endl;
 
-    //viewer.data().set_edges(newPoints, edges, edgeColors);
+    int RowIndex=0;
+    int counter = 0;
+    
+    
+    // generate faces of the first strip
+    for (counter=0; counter<nbSubdiv; ++counter)
+    {
+        RF.conservativeResize(RF.rows()+1, 3);
+        RF.row(RF.rows()-1)<<0, (counter+1)%nbSubdiv+1, counter+1;
+        cout<<counter<<"="<<0<< clamp(0,nbSubdiv, counter)+1 <<counter+1<<endl;
+        RowIndex++;
+    }
+    
+    // generate the inner strips
+    
+    // generate faces of the last strip
+    for (counter=nvtx-4; counter<nvtx; ++counter)
+    {
+        RowIndex++;
+        RF.conservativeResize(RF.rows()+1, 3);
+        RF.row(RF.rows()-1) <<counter,clamp(nvtx-5,nvtx-1, counter)+1,nvtx;
+        cout<<counter<<"="<<counter<< clamp(nvtx-5,nvtx-1, counter)+1 <<nvtx<<endl;
+
+    }
+
+    cout << "Verts"<<endl<<RV<<endl ;
+    cout << "Faces"<<endl<<RF<<endl ;
+
   // Set the new mesh.
   // Uncomment when you are finished coding the preparation of faces 
   // of the surface of revolution.
-  //viewer.data().clear();
-  //viewer.data().set_mesh(RV, RF);
-  //viewer.data().set_face_based(true);
-  //viewer.data().show_lines = true;
+  viewer.data().clear();
+  viewer.data().set_mesh(RV, RF);
+  viewer.data().set_face_based(true);
+  viewer.data().show_lines = true;
 
   // Keep the code below. It will be used to check your 
   // number of vertices and faces.
