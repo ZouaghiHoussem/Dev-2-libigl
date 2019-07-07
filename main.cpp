@@ -1,6 +1,6 @@
 #include <igl/opengl/glfw/Viewer.h>
 #include <igl/unproject_onto_mesh.h>
-
+#include <igl/hsv_to_rgb.h>
 using namespace std;
 using namespace igl;
 using namespace Eigen;
@@ -67,6 +67,8 @@ MatrixXd rotatePoints(MatrixXd points, double angle)
 double randd() {
     return (double)rand() / (RAND_MAX + 1.0);
 }
+
+
 
 MatrixXd GenerateVertices(MatrixXd points)
 {
@@ -160,9 +162,8 @@ void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
         RF.conservativeResize(RF.rows()+1, 3);
         RF.row(RF.rows()-1) <<counter,clamp(nvtx-5,nvtx-1, counter)+1,nvtx;
     }
-S
-    cout << "Verts"<<endl<<RV<<endl ;
-    cout << "Faces"<<endl<<RF<<endl ;
+
+ 
 
   // Set the new mesh.
   // Uncomment when you are finished coding the preparation of faces 
@@ -186,6 +187,34 @@ S
 
 
 
+
+RowVectorXd GetRGBColor(double hue)
+{
+    RowVectorXd color(3), hsv(3);
+    hsv.row(0)<<hue,1.0,1.0;
+    hsv_to_rgb(hsv,color);
+    return color;
+}
+void UpdateColors()
+{
+    int n = points.rows() ;
+    double displacement = 180/n , _color = 215;
+
+    Cp.resize(n,3);
+    edgeColors.resize(n-1,3);
+
+    for (int i=0; i<n; ++i)
+    {
+        Cp.row(i) << GetRGBColor(_color);
+        
+        if(i<n-1)
+            edgeColors.row(i) << GetRGBColor(_color);;
+        
+        _color=clamp(0, 360, _color+displacement,true) ;
+
+    }
+
+}
 bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
 {
   if ((modifier & ShiftModifier)
@@ -221,25 +250,17 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
         edges(edges.rows()-1,1) = points.rows()-1;
         
         //color
-        edgeColors.conservativeResize(edgeColors.rows()+1,3);
-        edgeColors.row(edgeColors.rows() - 1) << edgeColors.row(edgeColors.rows() - 2) ;
-        edgeColors.row(edgeColors.rows() - 2) << randd(),randd(),randd();
+        UpdateColors();
         
       // Offset the new point with respect to the plane by setting its
       // Z value to 0.0.
       points(points.rows() - 2,2) = 0.0;
     
         
-        // TEST
-        
-        //points.conservativeResize(points.rows()+1, 3);
-       // Vector3f pcollision_2 = pcollision;
 
-        Cp.conservativeResize(Cp.rows()+1,3);
-        Cp.row(Cp.rows() - 1) << Cp.row(Cp.rows() - 2) ;
-        Cp.row(Cp.rows() - 2) << randd(),randd(),randd();
+        //
 
-        
+
 
       viewer.data().set_points(points, Cp);
       viewer.data().set_edges(points, edges, edgeColors);
@@ -250,6 +271,8 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
   }
   return false;
 }
+
+
 
 bool key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int modifier)
 {
@@ -291,8 +314,8 @@ int main(int argc, char *argv[])
   edges.resize(1,2);
   edges << 0,1;
 
-  Cp.resize(2,3);
-  Cp << 1, 1, 1,1,1,1;
+  Cp.resize(1,3);
+  Cp << 1, 1, 1;
 
   edgeColors.resize(1,3);
   edgeColors << 1, 1, 1;
