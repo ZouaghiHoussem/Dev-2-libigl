@@ -117,60 +117,50 @@ void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
  
     int n = points.rows();
     int nvtx = (n-2)*4+1 ;
-    cout<<"n="<<n<<" nvtx="<<nvtx<<endl;
-
     int counter = 0;
-    
     
     // generate faces of the first strip
     for (counter=0; counter<nbSubdiv; ++counter)
     {
         RF.conservativeResize(RF.rows()+1, 3);
         RF.row(RF.rows()-1)<<0, (counter+1)%nbSubdiv+1, counter+1;
-        cout<<counter<<"="<<0<< clamp(0,nbSubdiv, counter)+1 <<counter+1<<endl;
     }
-    int displacement = 1 ;
+    
+    // generate the inner strips
+    int displacement = 0 ;
     if(n>2)
     {
         for (counter=1; counter<n-2; ++counter)
         {
+            displacement=((counter-1)*nbSubdiv)+1;
             for (int i=0; i<nbSubdiv; ++i) {
-                int cVIndex =counter+i ;
+                int cVIndex =displacement+i ;
+            
                 // FACE 1
                 RF.conservativeResize(RF.rows()+1, 3);
                 if(cVIndex%4==1)
                 {
                     RF.row(RF.rows()-1)<< cVIndex,cVIndex+4,(counter+1)*4;
-                    cout<<"Face("<<1<<"):"<< cVIndex<<cVIndex+4<<(counter+1)*4;
-
                 }
                 else
                 {
                     RF.row(RF.rows()-1)<<cVIndex,cVIndex+4,cVIndex+3;
-                    cout<<"Face("<<1<<"):"<< cVIndex<<cVIndex+4<<cVIndex+3;
                 }
-                
-
                 
                 // FACE 2
                 RF.conservativeResize(RF.rows()+1, 3);
-                RF.row(RF.rows()-1)<<cVIndex,clamp(counter,(counter)*5,cVIndex+1 ),cVIndex+4;
-                cout<<"Face("<<2<<"):"<< cVIndex <<clamp(counter,(counter)*5,cVIndex+1 )<<cVIndex+4<<endl;
+                RF.row(RF.rows()-1)<<cVIndex,clamp(displacement,displacement+4,cVIndex+1 ),cVIndex+4;
             }
-            displacement=(counter*nbSubdiv)+1;
         }
     }
-    // generate the inner strips
     
     // generate faces of the last strip
     for (counter=nvtx-4; counter<nvtx; ++counter)
     {
         RF.conservativeResize(RF.rows()+1, 3);
         RF.row(RF.rows()-1) <<counter,clamp(nvtx-5,nvtx-1, counter)+1,nvtx;
-        cout<<counter<<"="<<counter<< clamp(nvtx-5,nvtx-1, counter)+1 <<nvtx<<endl;
-
     }
-
+S
     cout << "Verts"<<endl<<RV<<endl ;
     cout << "Faces"<<endl<<RF<<endl ;
 
