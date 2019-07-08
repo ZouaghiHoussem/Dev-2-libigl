@@ -39,6 +39,29 @@ namespace {
   // forbid adding points.
   bool addingPoints = true;
 }
+/*
+ Utils
+ */
+// clamp the value between min and max
+int clamp (int min, int max, int value, bool returnToZero=true)
+{
+    if(value>=max && returnToZero)
+        return min;
+    else if(value>=max && !returnToZero)
+        return max;
+    else if(value<min)
+        return min;
+    else
+        return value;
+}
+// Get the RGB color from the HSV color
+RowVectorXd GetRGBColor(double hue)
+{
+    RowVectorXd color(3), hsv(3);
+    hsv.row(0)<<hue,1.0,1.0;
+    hsv_to_rgb(hsv,color);
+    return color;
+}
 
 /*
  Exercice (1) : Ajout interactif et affichage des points sur la courbe (50 %)
@@ -52,24 +75,11 @@ Eigen::Vector3f CollisionPositionBC( Eigen::Vector3f bc,int faceID)
     position(2)= 0.01;
     return position ;
 }
-// return the rotated matrix of points around axis X angle dgree
-MatrixXd rotatePoints(MatrixXd points, double angle)
-{
-    Transform<double, 3, Affine> t = Transform<double, 3, Affine>::Identity();
-    t.rotate( AngleAxisd( angle / 180 * M_PI, Vector3d::UnitX() ) );
-    
-    MatrixXd V_transformed = t.matrix() * (Eigen::Map<MatrixXd>(points.data(), points.rows(), points.cols()).rowwise().homogeneous().transpose());
-    V_transformed.transposeInPlace();
-    
-    V_transformed.conservativeResize(V_transformed.rows(), 3);
-    return V_transformed ;
-}
-double randd() {
-    return (double)rand() / (RAND_MAX + 1.0);
-}
 
 
-
+/*
+ Exercice (2) : Création de la surface de révolution (40 %)
+ */
 MatrixXd GenerateVertices(MatrixXd points)
 {
     MatrixXd verts ;
@@ -99,17 +109,28 @@ MatrixXd GenerateVertices(MatrixXd points)
     return verts;
 }
 
-int clamp (int min, int max, int value, bool returnToZero=true)
+// update vertex and edge color
+void UpdateColors()
 {
-    if(value>=max && returnToZero)
-        return min;
-    else if(value>=max && !returnToZero)
-        return max;
-    else if(value<min)
-        return min;
-    else
-        return value;
+    int n = points.rows() ;
+    double displacement = 180/n , _color = 215;
+    
+    Cp.resize(n,3);
+    edgeColors.resize(n-1,3);
+    
+    for (int i=0; i<n; ++i)
+    {
+        Cp.row(i) << GetRGBColor(_color);
+        
+        if(i<n-1)
+            edgeColors.row(i) << GetRGBColor(_color);;
+        
+        _color=clamp(0, 360, _color+displacement,true) ;
+        
+    }
+    
 }
+
 void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
 {
   cout << "Computing surface of revolution" << endl;
@@ -188,33 +209,6 @@ void surfaceOfRevolution(igl::opengl::glfw::Viewer& viewer)
 
 
 
-RowVectorXd GetRGBColor(double hue)
-{
-    RowVectorXd color(3), hsv(3);
-    hsv.row(0)<<hue,1.0,1.0;
-    hsv_to_rgb(hsv,color);
-    return color;
-}
-void UpdateColors()
-{
-    int n = points.rows() ;
-    double displacement = 180/n , _color = 215;
-
-    Cp.resize(n,3);
-    edgeColors.resize(n-1,3);
-
-    for (int i=0; i<n; ++i)
-    {
-        Cp.row(i) << GetRGBColor(_color);
-        
-        if(i<n-1)
-            edgeColors.row(i) << GetRGBColor(_color);;
-        
-        _color=clamp(0, 360, _color+displacement,true) ;
-
-    }
-
-}
 bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
 {
   if ((modifier & ShiftModifier)
@@ -241,7 +235,7 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
         //cout<<"Points:"<<endl<<points<<endl;
 
         
-        // Resize the edge
+        // Resize the edge list
         edges.conservativeResize(edges.rows()+1, 2);
         
         // Update edges values
@@ -256,11 +250,6 @@ bool my_mouse_down(igl::opengl::glfw::Viewer& viewer, int button, int modifier)
       // Z value to 0.0.
       points(points.rows() - 2,2) = 0.0;
     
-        
-
-        //
-
-
 
       viewer.data().set_points(points, Cp);
       viewer.data().set_edges(points, edges, edgeColors);
